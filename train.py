@@ -195,7 +195,7 @@ def train(opt):
     else:
         optimizer = torch.optim.SGD(model.parameters(), opt.lr, momentum=0.9, nesterov=True)
 
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, patience=3, verbose=True)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, patience=2, verbose=True)
 
     epoch = 0
     best_loss = 1e5
